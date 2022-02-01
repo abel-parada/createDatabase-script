@@ -1,0 +1,27 @@
+{
+    "host":"localhost",
+    "port":3306,
+    "admin":"root",
+    "adminpassword":"lepe",
+    "user":"abel",
+    "userpassword":"secret",
+    "dropUser":true,
+    "debug":true,
+    "database":"employeedb2",
+    "tables":[
+        {
+            "tableName":"employee",
+            "columns":[
+                "employeeId integer not null primary key",
+                "firstname varchar(20) not null",
+                "lastname varchar(20) not null",
+                "department varchar(15)",
+                "salary decimal(6,2)"
+            ],
+            "data":[
+                [1,"Abel","Parada","ICT", 5000],
+                [2,"Gandalf", "The Grey", "magical", 4500]
+            ]
+        }
+    ]
+}

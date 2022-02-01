@@ -1,0 +1,52 @@
+{
+    "host":"localhost",
+    "port":3306,
+    "admin":"parada",
+    "adminpassword":"secret",
+    "user":"mary",
+    "userpassword":"secret",
+    "dropUser":true,
+    "debug":true,
+    "database":"shopdb",
+    "tables":[
+        {
+            "tableName":"person",
+            "columns":[
+                "id integer not null primary key",
+                "firstname varchar(20) not null",
+                "lastname varchar(30) not null"  
+            ],
+            "data":[
+                [1,"Leila","Hökki"],
+                [2,"Matt", "River"]
+            ]
+        },
+        {
+            "tableName":"product",
+            "columns":[
+                "productId integer not null primary key",
+                "name varchar(20) not null",
+                "price integer not null"  
+            ],
+            "data":[
+                [1,"computer",300],
+                [2, "mouse", 30]
+            ]
+        },
+        {
+            "tableName": "customerorder",            
+            "columns": [            
+                "orderNumber integer not null primary key",            
+                "personId integer not null",            
+                "productNumber integer not null",            
+                "FOREIGN KEY (personId) REFERENCES person(id)",            
+                "FOREIGN KEY (productNumber) REFERENCES product(productId)"
+            ],            
+            "data": [            
+                [1,1,1],            
+                [2,1,2],            
+                [3,2,2]            
+            ]            
+        }
+    ]
+}

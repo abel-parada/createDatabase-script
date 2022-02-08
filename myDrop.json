@@ -1,0 +1,9 @@
+{
+    "host":"localhost",
+    "port":3306,
+    "admin":"root",
+    "adminpassword":"lepe",
+    "user":"abel",
+    "dropUser":true,
+    "database":"employeedb2"
+}
